@@ -1,0 +1,366 @@
+*, 
+*::before, 
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Sansita';
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* header */
+header{
+    display: inline;
+}
+
+header.nav-container{
+    width: 100%;
+    max-width: 1350px;
+    margin-inline: auto;
+    padding-block: 0.5rem;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color:white;
+    border-radius: 12px;
+    z-index: 9999;
+}
+
+header.nav-container .logo img{
+    width: 100%;
+    max-width: 150px;
+}
+
+header.nav-container .nav-list ul{
+    padding-left: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem 5rem;
+}
+
+body li{
+    list-style-type: none;
+}
+
+header.nav-container .nav-list li a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+
+    transition: all 0.2s ease-in-out;    
+}
+
+header.nav-container .nav-list li:hover a{
+    background-color: #F09319;
+    color: white;
+}
+
+/* end header */
+
+/* main */
+main{
+    flex: 1;
+
+    width: 100%;
+    max-width: 1250px;
+    margin-inline: auto;
+    padding: 2rem 2rem;
+    gap: 2rem;
+
+    display: flex;
+    flex-flow: row;
+}
+
+/* main content */
+main .content{
+    width: 100%;
+    display: flex;
+    flex: 5;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+/* gambar depan */
+main .content .gambar-depan ul{
+    width: 100%;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main .content .gambar-depan ul li{
+    width: 100%;
+}
+/* end gambar depan */
+
+/* home */
+
+main #home{
+    display: flex;
+    flex-flow: column;
+    row-gap: 1rem;
+}
+main .content .content-deskripsi{
+    flex: 1 1;
+}
+
+main .content .content-deskripsi .judul{
+    margin-block: 1rem;
+    font-size: 2rem;
+}
+
+.red{
+    color: #b80000;
+}
+
+.yellow{
+    color: #ff9800;
+}
+
+main .content .content-deskripsi p{
+    font-size: 1rem;
+    line-height: 1.3rem;
+    text-align: justify;
+}
+
+main .content .content-deskripsi button{
+    padding: 0.8rem 2rem;
+    border: 3px solid transparent;
+    border-radius: 999px;
+
+    background-color: #b80000;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+}
+
+main .content .content-deskripsi button:hover{
+    border: 3px solid #b80000;
+    background-color: transparent;
+
+    color: #b80000;
+}
+/* end home */
+
+/* menu */
+main .content #menu{
+    flex-flow: column nowrap;
+    row-gap: 4rem;
+    display: flex;
+}
+
+main .content #menu section{
+    margin-top: 50px ;
+}
+
+main .content #menu h1{
+    font-family: 'Kaushan Script', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+    color: #F09319;
+}
+
+/* menu andalan */
+main .content #menu .menu-andalan{
+    column-gap: 0.5rem;
+    display: flex;
+}
+
+#menu .menu-andalan div{
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #fdf3ae;
+    border-radius: 12px;
+}
+
+#menu .menu-andalan div img{
+    width: 100%;
+}
+
+#menu .menu-andalan div:hover{
+    border-radius: 12px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.9);
+}
+
+#menu .menu-andalan p.judul-menu-andalan{
+    color: #b80000;
+    font-family: 'Sansita';
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+    margin: 10px 0;
+}
+
+#menu .menu-andalan p.isi-menu-andalan{
+    margin: 0;
+    text-align: justify;
+}
+/* end menu andalan */
+
+/* daftar menu */
+#menu .daftar-menu table.makanan{
+    width: 100%;
+    border-top: #F09319 solid;
+}
+
+#menu .daftar-menu table.minuman{
+    width: 100%;
+    border-bottom: #F09319 solid;
+    padding-bottom: 1rem;
+}
+
+#menu .daftar-menu th{
+    display: flex;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    color: #b80000;
+}
+
+.daftar-menu table tr{
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.2rem;
+}
+/* end daftar menu */
+/* end menu */
+
+/* kontak */
+#kontak{
+    margin-top: 50px;
+}
+
+#kontak h1{
+    color: #F09319;
+    font-size: 2rem;
+    font-family: 'Kaushan Script', sans-serif;
+}
+
+#kontak ul{
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    row-gap: 0.4rem;
+}
+
+#kontak ul li a{
+    width: 100%;
+    color: black;
+    padding-left: 5px;
+    column-gap: 6px;
+    align-items: center;
+    display: flex;
+}
+
+#kontak ul li a i{
+    font-size: 1.8rem;
+
+}
+
+#kontak ul a{
+    text-decoration: none;
+}
+/* end kontak */
+
+
+/* aside */
+aside{
+    width: 100%;
+    flex: 2;
+    flex-flow: column nowrap;
+    row-gap: 2rem;
+    display: flex;
+}
+
+aside div{
+    flex-flow: column;
+    display: flex;
+
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+aside h1{
+    text-align: center;
+    color:#b80000;
+}
+
+aside p{
+    text-align: center;
+}
+
+aside img{
+    width: 100%;
+}
+
+aside div:hover{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+}
+/* end aside */
+
+/* footer */
+footer{
+    background-color: #b80000;
+    color: white;
+    text-align: center;
+    width: 100%;
+    max-width: 1350px;
+    margin-inline: auto;
+}
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px){
+    main {
+        flex-flow: column nowrap;
+    }
+      main aside {
+        align-self: center;
+    }
+}
+
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+    nav ul{
+        justify-content: center;
+    }
+
+    .nav-container{
+        flex-flow: column;
+    }
+
+    main .content #menu .menu-andalan{
+        flex-flow: column;
+        row-gap: 2rem;
+    }
+    main aside{
+        align-self: stretch;
+    }
+}
